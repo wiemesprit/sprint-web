@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Produit</h1>
+    {% for produit in produits %}
+    <div class="table-responsive">
+        <table >
+            <thead>
+            <tr>
+
+                <td><a href="{{ path('produit_show', { 'id': produit.id }) }}">{{ produit.id }}</a></td>
+
+                <td>{{ produit.nom }}</td>
+
+                <td>{{ produit.description }}</td>
+
+                <td>{{ produit.couleur }}</td>
+
+                <td>{{ produit.prix }}</td>
+
+                <td>{{ produit.prixt }}</td>
+
+                <td>{{ produit.remise }}</td>
+
+                <td>{{ produit.prixr }}</td>
+
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <ul>
+        <li>
+            <a href="{{ path('produit_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

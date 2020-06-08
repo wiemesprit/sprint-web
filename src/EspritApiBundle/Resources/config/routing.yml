@@ -1,0 +1,30 @@
+esprit_api_homepage:
+    path:     /
+    defaults: { _controller: EspritApiBundle:Default:index }
+
+
+all:
+    path:     /prod/all
+    defaults: { _controller: EspritApiBundle:produit:all }
+
+
+find_produit:
+    path:     /prod/find/{nom}
+    defaults: { _controller: EspritApiBundle:produit:find }
+
+
+create_produit:
+    path:     /prod/new
+    defaults: { _controller: EspritApiBundle:produit:new }
+
+edit_produit:
+    path:     /prod/edit/{id}
+    defaults: { _controller: EspritApiBundle:produit:edit}
+
+delete_produit:
+    path:     /prod/delete/{id}
+    defaults: { _controller: EspritApiBundle:produit:delete}
+
+tri_produit:
+    path:     /prod/tri
+    defaults: { _controller: EspritApiBundle:produit:tri}
